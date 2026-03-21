@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <ctype.h> // tolower()
+
 int main(){
     FILE *dosya;
     char metin[999];
@@ -22,7 +24,7 @@ int main(){
     fclose(dosya);
  int counter=0;
  for(int i=0; i<999; i++){
-    if(metin[i] == kelime[0]){
+    if(tolower(metin[i]) == tolower(kelime[0])){
         int j=0;
         while(metin[i+j] == kelime[j] && kelime[j] != '\0'){
             j++;
