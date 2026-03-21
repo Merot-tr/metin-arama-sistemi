@@ -18,6 +18,8 @@ int main(){
         printf("dosya acilamadi!\n");
         return 1;
     }
+    fgets(metin, sizeof(metin), dosya);
+    fclose(dosya);
  int counter=0;
  for(int i=0; i<999; i++){
     if(metin[i] == kelime[0]){
@@ -30,7 +32,7 @@ int main(){
         }
     }
  }
-
+ printf("kelime %d kez bulundu.\n", counter);
 }
 
  
