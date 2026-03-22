@@ -35,6 +35,7 @@ int main(){
     }
  }
  printf("kelime %d kez bulundu.\n", counter);
+    char ciktiAdi[20];
     printf("Sonucu kaydetmek istediginiz dosya adini giriniz (orn: sonuc.txt): ");
     scanf("%s", ciktiAdi);
 
