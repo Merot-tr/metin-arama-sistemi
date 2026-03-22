@@ -35,6 +35,21 @@ int main(){
     }
  }
  printf("kelime %d kez bulundu.\n", counter);
+    printf("Sonucu kaydetmek istediginiz dosya adini giriniz (orn: sonuc.txt): ");
+    scanf("%s", ciktiAdi);
+
+    ciktiDosyasi = fopen(ciktiAdi, "w"); // "w" modu dosyayı yazmak için
+    if (ciktiDosyasi == NULL) {
+        printf("Cikti dosyasi olusturulamadi!\n");
+        return 1;
+    }
+
+    fprintf(ciktiDosyasi, "Aranan Kelime: %s\n", kelime);
+    fprintf(ciktiDosyasi, "Bulunma Sayisi: %d\n", counter);
+    
+    fclose(ciktiDosyasi);
+    printf("Sonuclar '%s' dosyasina basariyla kaydedildi.\n", ciktiAdi);
+    return 0;
 }
 
  
