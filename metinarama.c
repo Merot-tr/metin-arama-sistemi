@@ -39,7 +39,7 @@ int main(){
     printf("Sonucu kaydetmek istediginiz dosya adini giriniz (orn: sonuc.txt): ");
     scanf("%s", ciktiAdi);
 
-    ciktiDosyasi = fopen(ciktiAdi, "w"); // "w" modu dosyayı yazmak için
+    FILE *ciktiDosyasi = fopen(ciktiAdi, "w"); // "w" modu dosyayı yazmak için
     if (ciktiDosyasi == NULL) {
         printf("Cikti dosyasi olusturulamadi!\n");
         return 1;
